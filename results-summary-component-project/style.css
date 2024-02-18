@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+* {
+  font: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:focus,
+button:active,
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --ff: "Hanken Grotesk", sans-serif;;
+
+    --fw-800: 800;
+    --fw-700: 700;
+    --fw-500: 500;
+
+    --fs-main: 1.125em;
+    --fs-h1: 3em;
+    --fs-h2: 1.6em;
+    --fs-h3: 1.2em;
+
+    --clr-primary-orangey-yellow: hsl(39, 100%, 56%);
+    --clr-primary-green-teal: hsl(166, 100%, 37%);
+    --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+
+    --clr-gradients-light-royal-blue: hsl(241, 81%, 54%); /*background*/
+    --clr-gradients-violet-blue: hsla(256, 72%, 46%, 1); /*circle*/
+    --clr-gradients-persian-blue: hsla(241, 72%, 46%, 0); /*circle*/
+    --clr-gradients-light-slate-blue: hsl(252, 100%, 67%); /*background*/
+
+    --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+    --clr-neutral-light-lavender: hsl(241, 100%, 89%);
+    --clr-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --clr-reaction-block : hsl(6, 100%, 98%);
+    --clr-memory-block: hsl(42, 100%, 97%);
+    --clr-verbal-block: hsl(180, 44%, 96%);
+    --clr-visual-block: hsl(240, 71%, 97%);
+}
+
+h1{
+    font-size: var(--fs-h1);
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-800);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-800);
+    color: var(--clr-neutral-white);
+}
+
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-dark-gray-blue);
+}
+
+.text-stat{
+    color: var(--clr-neutral-white);
+}
+
+.reaction-text{ color: var(--clr-primary-light-red); font-weight: var(--fw-700);}
+.memory-text{ color: var(--clr-primary-orangey-yellow); font-weight: var(--fw-700);}
+.verbal-text{ color: var(--clr-primary-green-teal); font-weight: var(--fw-700);}
+.visual-text{ color: var(--clr-primary-cobalt-blue); font-weight: var(--fw-700);}
+
+.reaction-block{ background: var(--clr-reaction-block) }
+.memory-block{ background: var(--clr-memory-block) }
+.verbal-block{ background: var(--clr-verbal-block) }
+.visual-block{ background: var(--clr-visual-block) }
+
+.numeric{
+    opacity: .5;
+}
+
+button{
+    background: var(--clr-neutral-dark-gray-blue);
+    color: var(--clr-neutral-white);
+    border-radius: 5vh;
+    padding: .6em 0;
+    border: none;
+}
+
+button:hover{
+    background: linear-gradient(to bottom, var(--clr-gradients-violet-blue), var(--clr-gradients-light-royal-blue));
+}
+
+/* Styling */
+body{
+    font-family: var(--ff);
+    font-size: var(--fs-main);
+    color: var(--clr-neutral-white);
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-neutral-white);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(316.89px, 1fr));
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5vh;
+}
+
+.container-left{
+    background: linear-gradient(to bottom, var(--clr-gradients-light-slate-blue), var(--clr-gradients-light-royal-blue));
+    border-radius: 5vh;
+    display: grid;
+    place-items: center;
+}
+
+.result-panel{
+    display: grid;
+    place-items: center;
+    padding: 2em;
+    gap: 2em;
+    text-align: center;
+}
+
+.result-panel h3{
+    opacity: .6;
+    color: var(--clr-neutral-white);
+}
+
+.circle{
+    background: linear-gradient(to bottom, var(--clr-gradients-violet-blue), var(--clr-gradients-persian-blue));
+    border-radius: 500px;
+    padding: 1.5em 3em;
+}
+
+.result-panel p{
+    opacity: .5;
+}
+
+.result-final{
+    display: grid;
+    gap: .5em;
+    line-height: 1.3;
+}
+
+.container-right{
+    display: grid;
+}
+
+.summary-panel{
+    display: grid;
+    padding: 2em;
+    gap: 2em;
+}
+
+.stat-container{
+    display: grid;
+    gap: 1em;
+}
+
+.stat-block{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: .5em 0;
+   border-radius: 1.3vh;
+}
+
+.stat-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+.numeric-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    gap: .3em;
+    color: var(--clr-neutral-dark-gray-blue);
+    font-weight: var(--fw-800);
+}
+
+@media (width <= 39.5625em){
+    .container{
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .container-left{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
